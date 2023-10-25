@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
+import Card from './Card';
+import "bootstrap/dist/css/bootstrap.css";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+        <h1>CS 230L</h1>
+        <h2>Section - 02</h2>
+        <p>WVU ID: 800380118</p>
+        <p>Hi I am Wyatt Rock</p>
+
+        <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <Card />
+    </div>
+    <div class="col-sm">
+      <Card />
+    </div>
+    <div class="col-sm">
+     <Card />
+    </div>
+  </div>
+</div>
+
     </div>
   );
 }
