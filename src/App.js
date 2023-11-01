@@ -1,34 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar';
 import Card from './Card';
+import Home from './Home';
+import Contact from './Contact';
 import "bootstrap/dist/css/bootstrap.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar />
-        <h1>CS 230L</h1>
-        <h2>Section - 02</h2>
-        <p>WVU ID: 800380118</p>
-        <p>Hi I am Wyatt Rock</p>
-
-        <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      <Card />
-    </div>
-    <div class="col-sm">
-      <Card />
-    </div>
-    <div class="col-sm">
-     <Card />
-    </div>
-  </div>
-</div>
-
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/card" element={<Card />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+     </BrowserRouter>
+   </div>
+    
   );
 }
 
